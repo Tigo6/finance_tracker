@@ -1,0 +1,31 @@
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 15vw;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+#sidebar-header {
+    color: white;
+    padding: 1.5rem 0;
+    background-color:var(--secondary-color); 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.sidebar-content {
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+hr {
+    margin: 0;
+    border-color: rgba(255,255,255,0.1);
+}
