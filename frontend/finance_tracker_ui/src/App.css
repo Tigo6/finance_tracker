@@ -1,6 +1,7 @@
 :root {
   --primary-color: #519872;
   --secondary-color: #3B5249;
+  --action-color: #dd6e42
   --text-color: #ffffff;
   --transition-speed: 0.3s;
 }
@@ -29,4 +30,14 @@ html, body, #root {
   height: 100%;
   overflow-y: auto; 
   background-color: #E8DAB2; 
+}
+
+.action-button{
+  background-color: var(--action-color);
+  color: var(--action-color);
+  transition: var(--transition-speed);
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }

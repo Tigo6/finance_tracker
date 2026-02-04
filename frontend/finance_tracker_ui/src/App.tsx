@@ -1,10 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Sidebar from './components/sidebar/Sidebar'
 import {getCSRFToken} from './ts/utils'
+import {Button} from '@mui/material'
+import AddTransactionModal from './components/addTransactionModal/AddTransactionModal'
 
 
 function App() {
+const [AddTransactionModalOpen, setAddTransactionModalOpen] = useState(false);
 
 useEffect(() => {
   const transactionData = {
@@ -29,10 +32,12 @@ useEffect(() => {
   return (
     <div id="main-container">
       <Sidebar />
-      
+      <AddTransactionModal
+      open = {AddTransactionModalOpen}
+      handleClose = {() => setAddTransactionModalOpen(false)}
+      />
       <main className="main-content">
-        <h1>Dashboard Financeiro</h1>
-        <p>O conteúdo principal aparece aqui.</p>
+        <Button variant="contained" color='success' className='action-button' onClick={()=>setAddTransactionModalOpen(true)}>Add transaction</Button>
       </main>
     </div>
   )
